@@ -36,4 +36,3 @@ set -x PATH /usr/local/opt/imagemagick@6/bin:$PATH
 set GITHUB_REPO $HOME/.ghq/github.com/mimikun
 set GITLAB_REPO $HOME/.ghq/gitlab.com/mimikun
 set BITBUCKET_REPO $HOME/.ghq/bitbucket.org/mimikun
-
