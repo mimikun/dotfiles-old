@@ -1,1 +1,0 @@
-# mimikun's dotfiles

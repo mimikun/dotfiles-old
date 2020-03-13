@@ -1,6 +1,7 @@
 # env
 set -x PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
-#set -x  PATH /usr/local/sbin:$PATH
+
+#eval (starship init fish)
 
 # language
 set -x LANG ja_JP.UTF-8
@@ -13,7 +14,8 @@ set -x PATH /usr/local/opt/opencv3/bin:$PATH
 set -x PATH $HOME/.cargo/bin:$PATH
 
 # Golang
-set -x GOPATH $HOME/go
+#set -x GOPATH $HOME/go
+set -x -U GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 # SQLite
@@ -36,3 +38,26 @@ set -x PATH /usr/local/opt/imagemagick@6/bin:$PATH
 set GITHUB_REPO $HOME/.ghq/github.com/mimikun
 set GITLAB_REPO $HOME/.ghq/gitlab.com/mimikun
 set BITBUCKET_REPO $HOME/.ghq/bitbucket.org/mimikun
+
+# alias
+alias mkdir='mkdir -p'
+
+# browser
+set -x BROWSER "open -a '$MY_BROWSER'"
+set -x MY_BROWSER "Brave Browser"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mimikun/google-cloud-sdk/path.fish.inc' ]; . '/Users/mimikun/google-cloud-sdk/path.fish.inc'; end
+
+# npm config
+set -x NPM_PACKAGES "$HOME/.npm-packages"
+
+set -x PATH $NPM_PACKAGES/bin $PATH
+
+set -x MANPATH $NPM_PACKAGES/share/man $MANPATH
+
+
+thefuck --alias | source
+
+alias f fuck
+alias ls exa

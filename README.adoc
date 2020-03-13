@@ -1,0 +1,12 @@
+= mimikun's dotfiles
+
+WIP
+
+$HOME/.vimrc
+$HOME/.npmrc
+$HOME/.profile
+$HOME/.tmux.conf
+$HOME/.vuerc
+$HOME/.yarnrc
+$HOME/.zprofile
+$HOME/.zshrc
