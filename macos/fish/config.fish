@@ -61,3 +61,7 @@ thefuck --alias | source
 
 alias f fuck
 alias ls exa
+
+set -x PATH $HOME/.dotnet $PATH
+
+alias rm 'rm -i'
