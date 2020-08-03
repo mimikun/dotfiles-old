@@ -6,7 +6,7 @@ PWD=$(pwd)
 for f in ??*
 do
     [[ "$f" == "install.sh" ]] && continue
-    [[ "$f" == "README.md" ]] && continue
+    [[ "$f" == "README.adoc" ]] && continue
     [[ "$f" == "functions" ]] && continue
 
     sudo ln -sfnv ${PWD}/${f} ${HOME}/.config/fish/${f}

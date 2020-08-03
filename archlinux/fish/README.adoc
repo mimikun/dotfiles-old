@@ -1,0 +1,8 @@
+= fish configuration file (Arch Linux)
+
+== Installation
+
+[source,shell]
+----
+bash install.sh
+----
