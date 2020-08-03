@@ -1,0 +1,8 @@
+= Yuto Tanaka's dotfiles
+
+== Install
+
+[source,shell]
+----
+bash install.sh
+----
