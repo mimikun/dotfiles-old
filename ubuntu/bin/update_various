@@ -1,0 +1,37 @@
+#!/bin/bash
+
+function read_confirm() {
+    while :
+        read -p "Continue? [y/N]" confirm
+    do
+	case $confirm in
+		"y" | "Y" ) return 0 ;;
+		"" | "N" | "n" ) return 1 ;;
+	esac
+    done
+}
+
+function update_pkg() {
+    sudo apt update
+    sudo apt list --upgradable | less
+    sudo apt upgrade -y
+
+    sudo apt autoremove
+    sudo apt-get clean
+}
+
+function reboot_recommend() {
+    if test -e /var/run/reboot-required; then
+        echo "Reboot recommended. Reboot?"
+	if read_confirm ; then
+	    sync; sync; sync;
+	    sudo reboot
+	fi
+    fi
+}
+
+if read_confirm ; then
+    update_pkg
+fi
+
+reboot_recommend
