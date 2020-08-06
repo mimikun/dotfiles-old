@@ -40,8 +40,12 @@ function update_various --description 'Update various things'
     update_docker_compose
     update_geckodriver
     update_peco
+    echo "Upgrade rust tools..."
     update_rust_tool
+    echo "Upgrade fisher..."
     fisher self-update
+    echo "Upgrade deno..."
+    deno upgrade
   end
   
   sleep 5

@@ -8,7 +8,6 @@ for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".editorconfig" ]] && continue
-    [[ "$f" == ".editorconfig-ytanaka" ]] && continue
     [[ "$f" == ".gitignore" ]] && continue
     [[ "$f" == "fish" ]] && continue
 

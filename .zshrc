@@ -128,4 +128,3 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 GITHUB_REPO="$HOME/.ghq/github.com/mimikun"
 GITLAB_REPO="$HOME/.ghq/gitlab.com/mimikun"
 BITBUCKET_REPO="$HOME/.ghq/bitbucket.org/mimikun"
-

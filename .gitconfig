@@ -1,0 +1,15 @@
+[user]
+	email = karaage_nennen@icloud.com
+	name = Yuto Tanaka
+[core]
+	autocrlf = false
+	ignorecase = false
+	editor = nvim
+	quotepath = false
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=86400
+[alias]
+	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
+	ls = "ls-files"
