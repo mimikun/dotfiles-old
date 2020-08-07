@@ -13,3 +13,5 @@ mimikun/update_docker_compose
 mimikun/update_geckodriver
 mimikun/update_peco
 sijad/gitignore
+mimikun/get_os_info
+mimikun/update_various
