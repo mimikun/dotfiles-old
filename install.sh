@@ -6,10 +6,23 @@ echo "Sync dotfiles"
 # Create shimlink $HOME dotfiles
 for f in .??*
 do
+    [[ "$f" == "ubuntu" ]] && continue
+    [[ "$f" == "windows" ]] && continue
+    [[ "$f" == "archlinux" ]] && continue
+    [[ "$f" == "macos" ]] && continue
+    [[ "$f" == "bin" ]] && continue
+    [[ "$f" == "nvim" ]] && continue
+    [[ "$f" == "fish" ]] && continue
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".editorconfig" ]] && continue
-    [[ "$f" == ".gitignore" ]] && continue
-    [[ "$f" == "fish" ]] && continue
+    [[ "$f" == "install.sh" ]] && continue
+    [[ "$f" == "LICENSE.txt" ]] && continue
+    [[ "$f" == "Makefile" ]] && continue
+    [[ "$f" == "README.adoc" ]] && continue
+    [[ "$f" == ".bashrc" ]] && continue
+    [[ "$f" == ".cshrc" ]] && continue
+    [[ "$f" == ".zshrc" ]] && continue
+    [[ "$f" == ".profile" ]] && continue
 
     sudo ln -sfnv ${NOWDIR}/${f} ${HOME}/${f}
 done
@@ -52,3 +65,15 @@ bash install.sh
 cd functions
 bash install.sh
 cd ${NOWDIR}
+
+## Arch Setup:
+### fish-shell
+#### Create shimlinks fish-shell
+#### if you are not Arch, exec `d7 [Enter]`
+echo "wip"
+
+## macOS Setup:
+### fish-shell
+#### Create shimlinks fish-shell
+#### if you are not macOS, exec `d7 [Enter]`
+echo "wip"
