@@ -1,0 +1,8 @@
+= Windows設定ファイル
+
+== Hyper config file
+
+[source,shell]
+----
+cp ./.hyper.js /mnt/c/Users/dzdzb/AppData/Roaming/Hyper/.hyper.js
+----
