@@ -7,6 +7,7 @@ set -x WORKSPACE $GHQ_ROOT/github.com/mimikun
 set -x DOTFILES $GHQ_ROOT/github.com/mimikun/dotfiles
 set -x PIPENV_VENV_IN_PROJECT 1
 set -x TODAY (date +'%Y/%m/%d')
+set -x WIN_HOME /mnt/c/Users/dzdzb 
 
 alias f fuck
 alias rm 'rm -i'
