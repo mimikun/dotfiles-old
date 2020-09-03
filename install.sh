@@ -34,6 +34,12 @@ cd bin
 bash install.sh
 cd ${NOWDIR}
 
+### Sync neovim config
+echo "Sync neovim configuration"
+cd nvim
+bash install.sh
+cd ${NOWDIR}
+
 ### Install fisher
 echo "Install fisher"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish

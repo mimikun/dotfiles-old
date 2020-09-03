@@ -38,6 +38,7 @@ set -x PATH $HOME/.npm-global/bin $PATH
 set -x PATH $HOME/.dotnet/tools/ $PATH
 set -x PATH $HOME/.gem/ruby/2.7.0/bin/ $PATH
 alias pip 'python3 -m pip'
+alias vim 'nvim'
 
 # delete duplicate path
 # https://qiita.com/itkr/items/1b868d75e54802e8d11a 
