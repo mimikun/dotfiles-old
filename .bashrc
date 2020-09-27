@@ -1,3 +1,5 @@
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -116,17 +118,30 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# https://qiita.com/frozenbonito/items/5bb6f30f1e8df8e02317
+#if [ -z "$SSH_AUTH_SOCK" ]; then
+#   # Check for a currently running instance of the agent
+#   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+#   if [ "$RUNNING_AGENT" = "0" ]; then
+#        # Launch a new instance of the agent
+#        ssh-agent -s &> $HOME/.ssh/ssh-agent
+#   fi
+#   eval `cat $HOME/.ssh/ssh-agent`
+#fi
+
+#ssh-add $HOME/.ssh/id_ed25519
+
 # https://qiita.com/yoskeoka/items/2d019d92fe6931930271
 # 本来はこの設定で問題ないが、2020/06時点ではWSL2が AF_UNIX に対応していないため動作しない
 # [ -n $WSL_AUTH_SOCK ] && export SSH_AUTH_SOCK=$WSL_AUTH_SOCK
 
 # 上記の設定で動作するようになったら以下の回避策を消す
-export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
-ss -a | grep -q $SSH_AUTH_SOCK
-if [ $? -ne 0   ]; then
-    rm -f $SSH_AUTH_SOCK
-    ( setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"/mnt/c/wsl/wsl-ssh-agent/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork & ) >/dev/null 2>&1
-fi
+#export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+#ss -a | grep -q $SSH_AUTH_SOCK
+#if [ $? -ne 0   ]; then
+#    rm -f $SSH_AUTH_SOCK
+#    ( setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"/mnt/c/wsl/wsl-ssh-agent/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork & ) >/dev/null 2>&1
+#fi
 
 # Launch fish-shell
 exec fish

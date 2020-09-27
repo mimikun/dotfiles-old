@@ -1,6 +1,6 @@
 # Global
 set -x LANG en_US.UTF-8
-set -x DISPLAY :0
+set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 set -x GHQ_ROOT $HOME/ghq
 set -x FISH_CONFIG_DIR $HOME/.config/fish
 set -x WORKSPACE $GHQ_ROOT/github.com/mimikun
@@ -37,6 +37,7 @@ set -x PATH $HOME/.local/bin/ $PATH
 set -x PATH $HOME/.npm-global/bin $PATH
 set -x PATH $HOME/.dotnet/tools/ $PATH
 set -x PATH $HOME/.gem/ruby/2.7.0/bin/ $PATH
+set -x PATH $HOME/depot_tools $PATH
 alias pip 'python3 -m pip'
 alias vim 'nvim'
 
