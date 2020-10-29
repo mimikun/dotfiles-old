@@ -37,15 +37,17 @@ function update_various --description 'Update various things'
   if set -lq _flag_all
     echo "Upgrade Rust nightly toolchains..."
     rustup update nightly
-    update_docker_compose
-    update_geckodriver
-    update_peco
     echo "Upgrade rust tools..."
     update_rust_tool
+    tldr --update
     echo "Upgrade fisher..."
     fisher self-update
     echo "Upgrade deno..."
     deno upgrade
+    echo "Update other tools..."
+    update_docker_compose
+    update_geckodriver
+    update_peco
   end
   
   sleep 5

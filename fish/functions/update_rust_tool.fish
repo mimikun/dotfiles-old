@@ -16,5 +16,7 @@ function update_rust_tool --description 'Update Rust Tools'
         cargo install tokei
         sleep 5
         cargo install ripgrep
+        sleep 5
+        cargo install tealdeer
     end
 end
