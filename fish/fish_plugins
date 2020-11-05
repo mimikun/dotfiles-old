@@ -3,10 +3,11 @@ fishpkg/fish-spin
 jethrokuan/z
 mimikun/editorconfig
 mimikun/gcd
+mimikun/get_os_info
 mimikun/numeronym
 mimikun/pcd
-mimikun/read_confirm
 mimikun/re_boot
+mimikun/read_confirm
 mimikun/shut_down
 mimikun/supersync
 mimikun/update_chromedriver
