@@ -19,9 +19,6 @@ do
     [[ "$f" == "LICENSE.txt" ]] && continue
     [[ "$f" == "Makefile" ]] && continue
     [[ "$f" == "README.adoc" ]] && continue
-    [[ "$f" == ".bashrc" ]] && continue
-    [[ "$f" == ".cshrc" ]] && continue
-    [[ "$f" == ".zshrc" ]] && continue
     [[ "$f" == ".profile" ]] && continue
 
     sudo ln -sfnv ${NOWDIR}/${f} ${HOME}/${f}
