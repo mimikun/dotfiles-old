@@ -1,6 +1,7 @@
 # Global
 set -x LANG en_US.UTF-8
-set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+#set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+set -x DISPLAY (ip route | awk '/default via / {print $3; exit}' 2>/dev/null):0
 set -x GHQ_ROOT $HOME/ghq
 set -x FISH_CONFIG_DIR $HOME/.config/fish
 set -x WORKSPACE $GHQ_ROOT/github.com/mimikun
@@ -15,6 +16,7 @@ alias l1 'ls -1'
 bind \cg gcd
 alias ls exa
 alias lt 'ls -T'
+alias mkdir 'mkdir -p'
 
 set -x PATH /usr/bin $PATH
 set -x PATH /usr/local/bin $PATH
@@ -44,3 +46,6 @@ alias vim 'nvim'
 # delete duplicate path
 # https://qiita.com/itkr/items/1b868d75e54802e8d11a 
 set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
+
+# starship config
+starship init fish | source

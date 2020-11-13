@@ -20,6 +20,7 @@ do
     [[ "$f" == "Makefile" ]] && continue
     [[ "$f" == "README.adoc" ]] && continue
     [[ "$f" == ".profile" ]] && continue
+    [[ "$f" == "starship.toml" ]] && continue
 
     sudo ln -sfnv ${NOWDIR}/${f} ${HOME}/${f}
 done
@@ -36,6 +37,9 @@ echo "Sync neovim configuration"
 cd nvim
 bash install.sh
 cd ${NOWDIR}
+
+### Sync starship config
+sudo ln -sfnv ${NOWDIR}/starship.toml ${HOME}/.config/starship.toml
 
 ### Install fisher
 echo "Install fisher"
