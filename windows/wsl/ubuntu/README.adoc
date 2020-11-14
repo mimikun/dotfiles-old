@@ -1,0 +1,8 @@
+= WSL Ubuntu dotfiles
+
+== Install
+
+[source,shell]
+----
+bash --norc install.sh
+----
