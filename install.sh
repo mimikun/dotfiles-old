@@ -20,7 +20,7 @@ do
     [[ "$f" == "Makefile" ]] && continue
     [[ "$f" == "README.adoc" ]] && continue
     [[ "$f" == ".profile" ]] && continue
-    [[ "$f" == "starship.toml" ]] && continue
+    [[ "$f" == "starship" ]] && continue
 
     sudo ln -sfnv ${NOWDIR}/${f} ${HOME}/${f}
 done
@@ -39,7 +39,10 @@ bash install.sh
 cd ${NOWDIR}
 
 ### Sync starship config
-sudo ln -sfnv ${NOWDIR}/starship.toml ${HOME}/.config/starship.toml
+echo "Sync starship configuration"
+cd starship
+bash install.sh
+cd ${NOWDIR}
 
 ### Install fisher
 echo "Install fisher"

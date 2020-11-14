@@ -27,6 +27,9 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -x DENO_INSTALL $HOME/.deno
 set -x PATH $DENO_INSTALL/bin $PATH
 
+set -x STARSHIP_CONFIG $HOME/.config/starship/starship.toml
+set -x STARSHIP_CACHE ~/.config/starship/cache
+
 #Ubuntu
 set -x PATH /bin $PATH
 set -x PATH /usr/games $PATH

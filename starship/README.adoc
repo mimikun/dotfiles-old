@@ -1,0 +1,9 @@
+= https://starship.rs/ja-JP/[starship] config files
+
+== Installation
+
+[source,shell]
+----
+bash install.sh
+----
+
