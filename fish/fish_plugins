@@ -7,10 +7,11 @@ mimikun/gcd
 mimikun/get_os_info
 mimikun/numeronym
 mimikun/pcd
-mimikun/re_boot
 mimikun/read_confirm
+mimikun/re_boot
 mimikun/shut_down
 mimikun/supersync
+mimikun/update_bw
 mimikun/update_chromedriver
 mimikun/update_docker_compose
 mimikun/update_geckodriver
