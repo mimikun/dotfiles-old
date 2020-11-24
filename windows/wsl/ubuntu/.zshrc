@@ -42,6 +42,7 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/.dotnet/tools/:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin/:$PATH"
 export PATH="$HOME/depot_tools:$PATH"
+export PATH="$HOME/.anyenv/bin:$PATH"
 
 alias pip="python3 -m pip"
 alias vim="nvim"
