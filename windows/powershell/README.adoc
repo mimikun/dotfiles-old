@@ -1,0 +1,7 @@
+= Powershell config file
+
+* Microsoft.PowerShell_profile.ps1
+  * `%USERPROFILE%` 以下に配置する
+* Shutdown.bat
+  * PATHの通ったところに配置する
+
