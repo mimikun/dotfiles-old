@@ -6,4 +6,3 @@
 ----
 bash install.sh
 ----
-

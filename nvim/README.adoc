@@ -1,1 +1,8 @@
 = NeoVim config files
+
+== Installation
+
+[source,shell]
+----
+bash install.sh
+----
