@@ -17,6 +17,7 @@ bind \cg gcd
 alias ls exa
 alias lt 'ls -T'
 alias mkdir 'mkdir -p'
+alias untar 'tar xvf'
 
 set -x PATH /usr/bin $PATH
 set -x PATH /usr/local/bin $PATH
