@@ -6,3 +6,6 @@ sal shutdown CustomShutdown
 
 function CustomReboot {Restart-Computer}
 sal reboot CustomReboot
+
+function CustomRebootUbuntu {wsl -t ubuntu}
+sal rebootubuntu CustomRebootUbuntu
