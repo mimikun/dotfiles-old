@@ -5,4 +5,5 @@
 [source,shell]
 ----
 cp ./.hyper.js /mnt/c/Users/dzdzb/AppData/Roaming/Hyper/.hyper.js
+cp ./.wslconfig /mnt/c/Users/dzdzb/.wslconfig
 ----
