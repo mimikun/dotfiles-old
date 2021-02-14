@@ -12,3 +12,5 @@ do
 
     sudo ln -sfnv ${NOWDIR}/${f} ${HOME}/${f}
 done
+
+sudo ln -sfnv ${NOWDIR}/cargo_packages.txt ${HOME}/cargo_packages.txt
