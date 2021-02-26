@@ -133,13 +133,17 @@ fi
 
 # Run genie
 if [ "`ps -eo pid,lstart,cmd | grep systemd | grep -v -e grep -e systemd- | sort -n -k2 | awk 'NR==1 { print $1 }'`" != "1" ]; then
-    genie -s
+#    genie -s
+     export HOGE="HOGE"
 fi
 
 export STARSHIP_CONFIG=~/.config/starship
 export STARSHIP_CACHE=~/.config/starship/cache
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# Launch services
+sudo service docker start
 
 # Launch fish-shell
 exec fish
