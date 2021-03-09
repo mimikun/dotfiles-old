@@ -142,6 +142,10 @@ export STARSHIP_CACHE=~/.config/starship/cache
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # Launch services
 sudo service docker start
 

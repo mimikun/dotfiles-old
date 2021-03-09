@@ -54,5 +54,8 @@ alias vim 'nvim'
 # https://qiita.com/itkr/items/1b868d75e54802e8d11a 
 set -x PATH (echo $PATH | tr ' ' '\n' | sort -u)
 
+# asdf
+source ~/.asdf/asdf.fish
+
 # starship config
 starship init fish | source
