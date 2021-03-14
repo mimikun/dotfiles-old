@@ -131,10 +131,10 @@ fi
 
 #ssh-add $HOME/.ssh/id_ed25519
 
-# Run genie
+# Run genie or launch services
 if [ "`ps -eo pid,lstart,cmd | grep systemd | grep -v -e grep -e systemd- | sort -n -k2 | awk 'NR==1 { print $1 }'`" != "1" ]; then
 #    genie -s
-     export HOGE="HOGE"
+    sudo service docker start
 fi
 
 export STARSHIP_CONFIG=~/.config/starship
@@ -145,9 +145,6 @@ eval "$(anyenv init -)"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
-# Launch services
-sudo service docker start
 
 # Launch fish-shell
 exec fish
