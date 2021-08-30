@@ -44,7 +44,7 @@ set -x PATH $HOME/.npm-global/bin $PATH
 set -x PATH $HOME/.dotnet/tools/ $PATH
 set -x PATH $HOME/.gem/ruby/2.7.0/bin/ $PATH
 set -x PATH $HOME/depot_tools $PATH
-set -x PATH $HOME/.anyenv/bin $PATH
+#set -x PATH $HOME/.anyenv/bin $PATH
 set -x XDG_CACHE_HOME $HOME/.cache
 
 alias pip 'python3 -m pip'
