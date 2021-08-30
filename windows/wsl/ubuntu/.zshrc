@@ -46,6 +46,7 @@ export PATH="$HOME/depot_tools:$PATH"
 
 alias pip="python3 -m pip"
 alias vim="nvim"
+. $HOME/.asdf/asdf.sh
 
 # delete duplicate path
 # https://qiita.com/itkr/items/1b868d75e54802e8d11a
