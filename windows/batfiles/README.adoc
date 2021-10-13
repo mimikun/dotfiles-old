@@ -1,0 +1,9 @@
+= batfiles
+
+* PATHの通ったところに配置する
+** GamingMode.bat
+** MiningMode.bat
+** StopTRex.bat
+* デスクトップに配置する
+** t-rex-mining.bat
+** gminer-mining.bat
