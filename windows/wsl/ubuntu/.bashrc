@@ -146,5 +146,10 @@ export STARSHIP_CACHE=~/.config/starship/cache
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# direnv config
+export EDITOR=nvim
+eval "$(asdf exec direnv hook bash)"
+direnv() { asdf exec direnv "$@"; }
+
 # Launch fish-shell
 exec fish

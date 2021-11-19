@@ -59,3 +59,7 @@ source ~/.asdf/asdf.fish
 
 # starship config
 starship init fish | source
+
+# asdf-direnv config
+set -x EDITOR nvim
+asdf exec direnv hook fish | source

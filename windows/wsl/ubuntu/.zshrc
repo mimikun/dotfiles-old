@@ -53,3 +53,8 @@ alias vim="nvim"
 
 # starship config
 eval "$(starship init zsh)"
+
+# direnv config
+export EDITOR=nvim
+eval "$(asdf exec direnv hook zsh)"
+direnv() { asdf exec direnv "$@"; }
