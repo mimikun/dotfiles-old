@@ -6,3 +6,5 @@ ghq 1.2.1
 peco 0.5.10
 bitwarden 1.19.1
 direnv 2.28.0
+shellcheck 0.8.0
+shfmt 3.4.0
