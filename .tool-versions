@@ -1,0 +1,8 @@
+ruby 3.0.2
+nodejs 16.8.0
+python 3.9.6
+neovim nightly
+ghq 1.2.1
+peco 0.5.10
+bitwarden 1.19.1
+direnv 2.28.0
