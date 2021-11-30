@@ -132,10 +132,11 @@ fi
 #ssh-add $HOME/.ssh/id_ed25519
 
 # Run genie or launch services
-if [ "`ps -eo pid,lstart,cmd | grep systemd | grep -v -e grep -e systemd- | sort -n -k2 | awk 'NR==1 { print $1 }'`" != "1" ]; then
+#if [ "`ps -eo pid,lstart,cmd | grep systemd | grep -v -e grep -e systemd- | sort -n -k2 | awk 'NR==1 { print $1 }'`" != "1" ]; then
 #    genie -s
-    sudo service docker start
-fi
+#fi
+
+sudo service docker start
 
 export STARSHIP_CONFIG=~/.config/starship
 export STARSHIP_CACHE=~/.config/starship/cache
