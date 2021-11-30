@@ -1,1 +1,0 @@
-powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& { curl http://127.0.0.1:4067/control?command=shutdown }"

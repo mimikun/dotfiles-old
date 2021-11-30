@@ -1,0 +1,37 @@
+= Windows utilities
+
+== PATHの通ったところに配置する
+
+* GamingMode.bat
+* MiningMode.bat
+* Shutdown.bat
+* t-rex-mining.bat
+* gminer-mining.bat
+* StopTrex.bat
+* StopTrex.ps1
+* DailyTask.bat
+* DailyTask.ps1
+* Reboot.bat
+* RebootUbuntu.bat
+* Shutdown.bat
+
+== デスクトップに配置する
+
+* gminer-mining.bat
+* DailyTask.bat
+
+== `%USERPROFILE%` 以下に配置する
+
+* Microsoft.PowerShell_profile.ps1
+* TrexPasswordClass.ps1
+
+=== TrexPasswordClass.ps1
+
+[source,powershell]
+----
+class MyClass{
+    [string] GetPassword(){
+        return "my password here"
+    }
+}
+----

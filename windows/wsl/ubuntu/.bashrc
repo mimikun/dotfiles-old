@@ -136,7 +136,15 @@ fi
 #    genie -s
 #fi
 
-sudo service docker start
+#sudo service docker start
+
+# Start Docker daemon automatically when logging in if not running.
+RUNNING=`ps aux | grep dockerd | grep -v grep`
+if [ -z "$RUNNING" ]; then
+    sudo dockerd > /dev/null 2>&1 &
+    disown
+fi
+
 
 export STARSHIP_CONFIG=~/.config/starship
 export STARSHIP_CACHE=~/.config/starship/cache
