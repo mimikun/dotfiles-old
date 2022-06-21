@@ -8,14 +8,15 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  
+  "call dein#add('Shougo/deoplete.nvim')
+  call dein#add('vim-denops/denops.vim')
+  call dein#add('vim-denops/denops-helloworld.vim')
   call dein#add('jceb/vim-orgmode')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-  let g:deoplete#enable_at_startup = 1
+  "let g:deoplete#enable_at_startup = 1
 
   call dein#end()
   call dein#save_state()
