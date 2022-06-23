@@ -8,3 +8,4 @@ bitwarden 1.20.0
 direnv 2.28.0
 shellcheck 0.8.0
 shfmt 3.4.0
+chezmoi 2.15.1
